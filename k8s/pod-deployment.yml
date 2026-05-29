@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xronos-deployment
+  labels:
+    app: xronos
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: xronos
+  template:
+    metadata:
+      labels:
+        app: xronos
+    spec:
+      containers:
+        - name: xronos-pod
+          image: 163.152.20.89:5000/xronos
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - mountPath: /workspace
+              name: storage-volume
+          env:
+            - name: PATH
+              value: /usr/local/bin:/bin:/usr/bin:/home/xronos/.local/bin
+          command: ["/bin/bash", "-c"]
+          args:
+            - |
+              cd /workspace/Xronos-Framework &&
+              pip install --upgrade pip &&
+              pip install -e ".[dev]" &&
+              echo "Pip install completed successfully!" > /workspace/install-success.log &&
+              sleep infinity
+      volumes:
+        - name: storage-volume
+          persistentVolumeClaim:
+            claimName: nfs-storage-claim
+

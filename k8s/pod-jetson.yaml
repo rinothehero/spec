@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xronos-client
+  labels:
+    app: xronos
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: xronos
+  template:
+    metadata:
+      labels:
+        app: xronos
+    spec:
+      nodeSelector:
+        label: jetson
+      containers:
+        - name: xronos-client
+          image: 10.0.2.40:5000/xronos-client-jetson
+          command: [ "/bin/sh", "-c", "sleep infinity" ]
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - mountPath: /usr/lib
+              name: nvidia-driver
+            - mountPath: /usr/local/cuda
+              name: cuda-path
+            - mountPath: /dev
+              name: dev
+            - mountPath: /run/jtop.sock
+              name: jtop-socket
+              
+      volumes:
+        - name: nvidia-driver
+          hostPath:
+            path: /usr/lib
+        - name: cuda-path
+          hostPath:
+            path: /usr/local/cuda
+        - name: dev
+          hostPath:
+            path: /dev
+        - name: jtop-socket
+          hostPath:
+            path: /run/jtop.sock
+       

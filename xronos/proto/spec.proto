@@ -1,0 +1,153 @@
+syntax = "proto3";
+
+package xronos.spec;
+
+service Drafter {
+    rpc Health (HealthRequest) returns (HealthResponse) {}
+    rpc SetFrequency (SetFrequencyRequest) returns (SetFrequencyResponse) {}
+    rpc IdlePower (IdlePowerRequest) returns (IdlePowerResponse) {}
+    rpc InitSession (InitSessionRequest) returns (InitSessionResponse) {}
+    rpc Draft (DraftRequest) returns (DraftResponse) {}
+    rpc Commit (CommitRequest) returns (CommitResponse) {}
+    rpc ResetSession (ResetSessionRequest) returns (ResetSessionResponse) {}
+}
+
+service Verifier {
+    rpc Health (HealthRequest) returns (HealthResponse) {}
+    rpc SetFrequency (SetFrequencyRequest) returns (SetFrequencyResponse) {}
+    rpc IdlePower (IdlePowerRequest) returns (IdlePowerResponse) {}
+    rpc InitSession (InitSessionRequest) returns (InitSessionResponse) {}
+    rpc Verify (VerifyRequest) returns (VerifyResponse) {}
+    rpc Generate (GenerateRequest) returns (GenerateResponse) {}
+    rpc ResetSession (ResetSessionRequest) returns (ResetSessionResponse) {}
+}
+
+message HealthRequest {}
+
+message HealthResponse {
+    bool ok = 1;
+    string message = 2;
+    string model = 3;
+    string device = 4;
+    map<string, string> metadata = 5;
+}
+
+message RailEnergy {
+    string rail = 1;
+    double mean_power_mw = 2;
+    double energy_mj = 3;
+}
+
+message SetFrequencyRequest {
+    uint64 jetson_gpu_freq_hz = 1;
+    uint32 nvidia_smi_gpu_clock_mhz = 2;
+}
+
+message SetFrequencyResponse {
+    bool ok = 1;
+    string message = 2;
+    map<string, string> metadata = 3;
+    string error = 4;
+}
+
+message IdlePowerRequest {
+    double duration_s = 1;
+}
+
+message IdlePowerResponse {
+    double duration_s = 1;
+    repeated RailEnergy rails = 2;
+    uint32 n_power_samples = 3;
+    string error = 4;
+}
+
+message DraftRequest {
+    string session_id = 1;
+    uint32 gamma = 2;
+    // Absolute committed sequence length expected before drafting, including context tokens.
+    uint32 base_committed_tokens = 3;
+}
+
+message DraftResponse {
+    repeated int64 draft_tokens = 1;
+    double latency_ms = 2;
+    repeated RailEnergy rails = 3;
+    uint32 n_power_samples = 4;
+    string error = 5;
+}
+
+message VerifyRequest {
+    string session_id = 1;
+    repeated int64 draft_tokens = 2;
+    bool append_replacement = 3;
+    repeated int64 stop_token_ids = 4;
+    // Absolute committed sequence length expected before verification, including context tokens.
+    uint32 base_committed_tokens = 5;
+}
+
+message VerifyResponse {
+    uint32 accepted_tokens = 1;
+    int64 replacement_token = 2;
+    double latency_ms = 3;
+    string error = 4;
+    repeated RailEnergy rails = 5;
+    uint32 n_power_samples = 6;
+    bool appended_replacement = 7;
+    // Absolute committed sequence length after verification, including context tokens.
+    uint32 committed_tokens = 8;
+}
+
+message GenerateRequest {
+    string session_id = 1;
+    uint32 max_new_tokens = 2;
+    repeated int64 stop_token_ids = 3;
+}
+
+message GenerateResponse {
+    repeated int64 generated_tokens = 1;
+    double latency_ms = 2;
+    string error = 3;
+    repeated RailEnergy rails = 4;
+    uint32 n_power_samples = 5;
+}
+
+message InitSessionRequest {
+    string session_id = 1;
+    repeated int64 context_tokens = 2;
+}
+
+message InitSessionResponse {
+    string session_id = 1;
+    uint32 context_tokens = 2;
+    double latency_ms = 3;
+    repeated RailEnergy rails = 4;
+    uint32 n_power_samples = 5;
+    string error = 6;
+}
+
+message CommitRequest {
+    string session_id = 1;
+    uint32 accepted_tokens = 2;
+    int64 replacement_token = 3;
+    bool append_replacement = 4;
+    // Absolute committed sequence length expected before committing this draft.
+    uint32 base_committed_tokens = 5;
+}
+
+message CommitResponse {
+    // Absolute committed sequence length after the commit, including context tokens.
+    uint32 committed_tokens = 1;
+    double latency_ms = 2;
+    repeated RailEnergy rails = 3;
+    uint32 n_power_samples = 4;
+    string error = 5;
+}
+
+message ResetSessionRequest {
+    string session_id = 1;
+}
+
+message ResetSessionResponse {
+    bool ok = 1;
+    string error = 2;
+}

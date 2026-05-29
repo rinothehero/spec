@@ -1,0 +1,1186 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: xronos-spec
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: spec-results
+  namespace: xronos-spec
+spec:
+  storageClassName: ""
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+  selector:
+    matchExpressions:
+      - key: type
+        operator: In
+        values:
+          - nfs
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: hf-cache
+  namespace: xronos-spec
+spec:
+  storageClassName: ""
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 50Gi
+  selector:
+    matchExpressions:
+      - key: type
+        operator: In
+        values:
+          - nfs
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spec-prompts
+  namespace: xronos-spec
+data:
+  prompts.jsonl: |
+    {"id": "mobile_ai", "prompt": "The future of mobile AI is"}
+    {"id": "edge_inference", "prompt": "Efficient edge inference requires"}
+    {"id": "wireless_systems", "prompt": "In a wireless edge system, the main bottleneck is"}
+    {"id": "distributed_llm", "prompt": "Distributed LLM inference can reduce latency by"}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: drafter-doctor
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "1"
+    xronos.run-after: ""
+    xronos.produces: "/results/drafter_doctor.json"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: jetson-drafter
+      containers:
+        - name: doctor
+          image: xronos:jetson
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
+          env:
+            - name: DRAFTER_MODEL
+              value: meta-llama/Llama-3.2-1B
+            - name: DRAFTER_GPU_FREQ_HZ
+              value: "612000000"
+            - name: DRAFTER_GPU_DEVFREQ_ROOT
+              value: ""
+            - name: HF_HOME
+              value: /models/huggingface
+            - name: TRANSFORMERS_CACHE
+              value: /models/huggingface/transformers
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.experiment_doctor \
+                --role drafter \
+                --model "$DRAFTER_MODEL" \
+                --device cuda:0 \
+                --jetson-gpu-freq-hz "$DRAFTER_GPU_FREQ_HZ" \
+                --jetson-gpu-devfreq-root "$DRAFTER_GPU_DEVFREQ_ROOT" \
+                --require-hf-token \
+                --require-power \
+                --require-frequency-control \
+                --json-out /results/drafter_doctor.json
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: model-cache
+              mountPath: /models
+            - name: sysfs
+              mountPath: /sys
+            - name: dev
+              mountPath: /dev
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+        - name: model-cache
+          persistentVolumeClaim:
+            claimName: hf-cache
+        - name: sysfs
+          hostPath:
+            path: /sys
+        - name: dev
+          hostPath:
+            path: /dev
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: driver-doctor
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "3"
+    xronos.run-after: "verifier-doctor"
+    xronos.produces: "/results/driver_doctor.json"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: doctor
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TOKENIZER
+              value: meta-llama/Llama-3.2-1B
+            - name: PROMPT_COUNT
+              value: "4"
+            - name: HF_HOME
+              value: /models/huggingface
+            - name: TRANSFORMERS_CACHE
+              value: /models/huggingface/transformers
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.experiment_doctor \
+                --role driver \
+                --tokenizer "$TOKENIZER" \
+                --prompts-jsonl /config/prompts.jsonl \
+                --min-prompts "$PROMPT_COUNT" \
+                --k8s-manifest k8s/spec-decoding.yaml \
+                --require-k8s-manifest \
+                --require-hf-token \
+                --json-out /results/driver_doctor.json
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: model-cache
+              mountPath: /models
+            - name: prompts
+              mountPath: /config
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+        - name: model-cache
+          persistentVolumeClaim:
+            claimName: hf-cache
+        - name: prompts
+          configMap:
+            name: spec-prompts
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: verifier-doctor
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "2"
+    xronos.run-after: "drafter-doctor"
+    xronos.produces: "/results/verifier_doctor.json"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: doctor
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
+          env:
+            - name: VERIFIER_MODEL
+              value: meta-llama/Llama-3.2-3B
+            - name: VERIFIER_GPU_CLOCK_MHZ
+              value: "1410"
+            - name: NVIDIA_DRIVER_CAPABILITIES
+              value: compute,utility
+            - name: HF_HOME
+              value: /models/huggingface
+            - name: TRANSFORMERS_CACHE
+              value: /models/huggingface/transformers
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.experiment_doctor \
+                --role verifier \
+                --model "$VERIFIER_MODEL" \
+                --device cuda:0 \
+                --gpu-index 0 \
+                --gpu-clock-mhz "$VERIFIER_GPU_CLOCK_MHZ" \
+                --require-hf-token \
+                --require-power \
+                --require-frequency-control \
+                --json-out /results/verifier_doctor.json
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: model-cache
+              mountPath: /models
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+        - name: model-cache
+          persistentVolumeClaim:
+            claimName: hf-cache
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spec-drafter
+  namespace: xronos-spec
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spec-drafter
+  template:
+    metadata:
+      labels:
+        app: spec-drafter
+    spec:
+      nodeSelector:
+        xronos-role: jetson-drafter
+      containers:
+        - name: drafter
+          image: xronos:jetson
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
+          env:
+            - name: DRAFTER_MODEL
+              value: meta-llama/Llama-3.2-1B
+            - name: DRAFTER_GPU_FREQ_HZ
+              value: "612000000"
+            - name: DRAFTER_GPU_DEVFREQ_ROOT
+              value: ""
+            - name: HF_HOME
+              value: /models/huggingface
+            - name: TRANSFORMERS_CACHE
+              value: /models/huggingface/transformers
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.drafter_server \
+                --model "$DRAFTER_MODEL" \
+                --host "[::]" --port 50061 \
+                --device cuda:0 --dtype float16 \
+                --power-interval 0.01 \
+                --jetson-gpu-freq-hz "$DRAFTER_GPU_FREQ_HZ" \
+                --jetson-gpu-devfreq-root "$DRAFTER_GPU_DEVFREQ_ROOT"
+          ports:
+            - containerPort: 50061
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          startupProbe:
+            tcpSocket:
+              port: 50061
+            periodSeconds: 10
+            failureThreshold: 120
+          readinessProbe:
+            tcpSocket:
+              port: 50061
+            periodSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            tcpSocket:
+              port: 50061
+            periodSeconds: 30
+            failureThreshold: 3
+          volumeMounts:
+            - name: model-cache
+              mountPath: /models
+            - name: sysfs
+              mountPath: /sys
+            - name: dev
+              mountPath: /dev
+      volumes:
+        - name: model-cache
+          persistentVolumeClaim:
+            claimName: hf-cache
+        - name: sysfs
+          hostPath:
+            path: /sys
+        - name: dev
+          hostPath:
+            path: /dev
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spec-drafter
+  namespace: xronos-spec
+spec:
+  selector:
+    app: spec-drafter
+  ports:
+    - name: grpc
+      port: 50061
+      targetPort: 50061
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spec-verifier
+  namespace: xronos-spec
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spec-verifier
+  template:
+    metadata:
+      labels:
+        app: spec-verifier
+    spec:
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: verifier
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
+          env:
+            - name: VERIFIER_MODEL
+              value: meta-llama/Llama-3.2-3B
+            - name: VERIFIER_GPU_CLOCK_MHZ
+              value: "1410"
+            - name: NVIDIA_DRIVER_CAPABILITIES
+              value: compute,utility
+            - name: HF_HOME
+              value: /models/huggingface
+            - name: TRANSFORMERS_CACHE
+              value: /models/huggingface/transformers
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.verifier_server \
+                --model "$VERIFIER_MODEL" \
+                --host "[::]" --port 50062 \
+                --device cuda:0 --dtype float16 \
+                --power-interval 0.01 \
+                --gpu-index 0 \
+                --gpu-clock-mhz "$VERIFIER_GPU_CLOCK_MHZ"
+          ports:
+            - containerPort: 50062
+          startupProbe:
+            tcpSocket:
+              port: 50062
+            periodSeconds: 10
+            failureThreshold: 120
+          readinessProbe:
+            tcpSocket:
+              port: 50062
+            periodSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            tcpSocket:
+              port: 50062
+            periodSeconds: 30
+            failureThreshold: 3
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - name: model-cache
+              mountPath: /models
+      volumes:
+        - name: model-cache
+          persistentVolumeClaim:
+            claimName: hf-cache
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spec-verifier
+  namespace: xronos-spec
+spec:
+  selector:
+    app: spec-verifier
+  ports:
+    - name: grpc
+      port: 50062
+      targetPort: 50062
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: k8s-manifest-audit
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "4"
+    xronos.run-after: "driver-doctor"
+    xronos.produces: "/results/k8s_manifest_audit.json,/results/k8s_runbook.json,/results/k8s_runbook.md"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: audit
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              set -euo pipefail
+              python -m xronos.infer.k8s_manifest_audit \
+                --manifest k8s/spec-decoding.yaml \
+                --out /results/k8s_manifest_audit.json
+              python -m xronos.infer.k8s_runbook \
+                --manifest k8s/spec-decoding.yaml \
+                --out /results/k8s_runbook.json \
+                --markdown-out /results/k8s_runbook.md
+          volumeMounts:
+            - name: results
+              mountPath: /results
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: network-probe
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "5"
+    xronos.run-after: "k8s-manifest-audit"
+    xronos.produces: "/results/network_probe.json"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: network-probe
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: STARTUP_TIMEOUT_S
+              value: "900"
+            - name: HEALTH_CHECK_INTERVAL_S
+              value: "5"
+            - name: NETWORK_PROBE_SAMPLES
+              value: "20"
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.network_probe \
+                --drafter-addr spec-drafter:50061 \
+                --verifier-addr spec-verifier:50062 \
+                --samples "$NETWORK_PROBE_SAMPLES" \
+                --warmup-samples 3 \
+                --startup-timeout-s "$STARTUP_TIMEOUT_S" \
+                --health-check-interval-s "$HEALTH_CHECK_INTERVAL_S" \
+                --out /results/network_probe.json
+          volumeMounts:
+            - name: results
+              mountPath: /results
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: verifier-baseline-plan
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "6"
+    xronos.run-after: "network-probe"
+    xronos.produces: "/results/verifier_baseline_plan.json"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: plan
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TOKENIZER
+              value: meta-llama/Llama-3.2-1B
+            - name: IDLE_BASELINE_S
+              value: "5"
+            - name: SWEEP_SEED
+              value: "42"
+            - name: EXPERIMENT_RUNS
+              value: "5"
+            - name: MAX_START_TEMP_C
+              value: "85"
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.verifier_baseline_driver \
+                --dry-run \
+                --drafter-addr spec-drafter:50061 \
+                --verifier-addr spec-verifier:50062 \
+                --tokenizer "$TOKENIZER" \
+                --prompts-jsonl /config/prompts.jsonl \
+                --drafter-freqs-hz 408000000,612000000,828000000 \
+                --verifier-clocks-mhz 810,1050,1410 \
+                --max-new-tokens 64 \
+                --stop-token-ids "" \
+                --idle-baseline-s "$IDLE_BASELINE_S" \
+                --idle-baseline-policy run \
+                --shuffle-conditions --seed "$SWEEP_SEED" \
+                --shuffle-runs \
+                --sample-runtime-metadata \
+                --max-start-temp-c "$MAX_START_TEMP_C" \
+                --warmup-runs 1 \
+                --runs "$EXPERIMENT_RUNS" \
+                --out /results/verifier_baseline.csv \
+                --plan-out /results/verifier_baseline_plan.json \
+                --trace-out /results/verifier_baseline_trace.jsonl
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: prompts
+              mountPath: /config
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+        - name: prompts
+          configMap:
+            name: spec-prompts
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: spec-plan
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "7"
+    xronos.run-after: "verifier-baseline-plan"
+    xronos.produces: "/results/spec_plan.json"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: plan
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TOKENIZER
+              value: meta-llama/Llama-3.2-1B
+            - name: IDLE_BASELINE_S
+              value: "5"
+            - name: SWEEP_SEED
+              value: "42"
+            - name: EXPERIMENT_RUNS
+              value: "5"
+            - name: MAX_START_TEMP_C
+              value: "85"
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.spec_driver \
+                --dry-run \
+                --drafter-addr spec-drafter:50061 \
+                --verifier-addr spec-verifier:50062 \
+                --tokenizer "$TOKENIZER" \
+                --prompts-jsonl /config/prompts.jsonl \
+                --gammas 1,2,4,8,16 \
+                --drafter-freqs-hz 408000000,612000000,828000000 \
+                --verifier-clocks-mhz 810,1050,1410 \
+                --max-new-tokens 64 \
+                --stop-token-ids "" \
+                --idle-baseline-s "$IDLE_BASELINE_S" \
+                --idle-baseline-policy run \
+                --shuffle-conditions --seed "$SWEEP_SEED" \
+                --shuffle-runs \
+                --sample-runtime-metadata \
+                --max-start-temp-c "$MAX_START_TEMP_C" \
+                --warmup-runs 1 \
+                --runs "$EXPERIMENT_RUNS" \
+                --out /results/spec_gamma_sweep.csv \
+                --plan-out /results/spec_plan.json \
+                --trace-out /results/spec_trace.jsonl
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: prompts
+              mountPath: /config
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+        - name: prompts
+          configMap:
+            name: spec-prompts
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: plan-audit
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "8"
+    xronos.run-after: "spec-plan"
+    xronos.produces: "/results/plan_audit.json"
+    xronos.consumes: "/results/spec_plan.json,/results/verifier_baseline_plan.json"
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: plan-audit
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: EXPERIMENT_RUNS
+              value: "5"
+            - name: PROMPT_COUNT
+              value: "4"
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.plan_audit \
+                --plan /results/spec_plan.json /results/verifier_baseline_plan.json \
+                --min-runs "$EXPERIMENT_RUNS" \
+                --min-prompts "$PROMPT_COUNT" \
+                --min-gammas 5 \
+                --summary-energy-key mean_drafter_active_energy_mj_per_token \
+                --paired-energy-key system_active_energy_mj_per_generated_token \
+                --require-two-device-boundary \
+                --out /results/plan_audit.json
+          volumeMounts:
+            - name: results
+              mountPath: /results
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: verifier-baseline
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "9"
+    xronos.run-after: "plan-audit"
+    xronos.produces: "/results/verifier_baseline.csv,/results/verifier_baseline_plan.json,/results/verifier_baseline_trace.jsonl"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: driver
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TOKENIZER
+              value: meta-llama/Llama-3.2-1B
+            - name: IDLE_BASELINE_S
+              value: "5"
+            - name: SWEEP_SEED
+              value: "42"
+            - name: EXPERIMENT_RUNS
+              value: "5"
+            - name: MAX_START_TEMP_C
+              value: "85"
+            - name: THERMAL_WAIT_TIMEOUT_S
+              value: "300"
+            - name: STARTUP_TIMEOUT_S
+              value: "900"
+            - name: HEALTH_CHECK_INTERVAL_S
+              value: "5"
+            - name: HF_HOME
+              value: /models/huggingface
+            - name: TRANSFORMERS_CACHE
+              value: /models/huggingface/transformers
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.verifier_baseline_driver \
+                --drafter-addr spec-drafter:50061 \
+                --verifier-addr spec-verifier:50062 \
+                --tokenizer "$TOKENIZER" \
+                --prompts-jsonl /config/prompts.jsonl \
+                --drafter-freqs-hz 408000000,612000000,828000000 \
+                --verifier-clocks-mhz 810,1050,1410 \
+                --max-new-tokens 64 \
+                --stop-token-ids "" \
+                --idle-baseline-s "$IDLE_BASELINE_S" \
+                --idle-baseline-policy run \
+                --shuffle-conditions --seed "$SWEEP_SEED" \
+                --shuffle-runs \
+                --sample-runtime-metadata \
+                --startup-timeout-s "$STARTUP_TIMEOUT_S" \
+                --health-check-interval-s "$HEALTH_CHECK_INTERVAL_S" \
+                --max-start-temp-c "$MAX_START_TEMP_C" \
+                --thermal-wait-timeout-s "$THERMAL_WAIT_TIMEOUT_S" \
+                --warmup-runs 1 \
+                --runs "$EXPERIMENT_RUNS" \
+                --out /results/verifier_baseline.csv \
+                --resume \
+                --plan-out /results/verifier_baseline_plan.json \
+                --trace-out /results/verifier_baseline_trace.jsonl
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: model-cache
+              mountPath: /models
+            - name: prompts
+              mountPath: /config
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+        - name: model-cache
+          persistentVolumeClaim:
+            claimName: hf-cache
+        - name: prompts
+          configMap:
+            name: spec-prompts
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: spec-driver
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "10"
+    xronos.run-after: "verifier-baseline"
+    xronos.produces: "/results/spec_gamma_sweep.csv,/results/spec_plan.json,/results/spec_trace.jsonl"
+    xronos.consumes: ""
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: driver
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TOKENIZER
+              value: meta-llama/Llama-3.2-1B
+            - name: IDLE_BASELINE_S
+              value: "5"
+            - name: SWEEP_SEED
+              value: "42"
+            - name: EXPERIMENT_RUNS
+              value: "5"
+            - name: MAX_START_TEMP_C
+              value: "85"
+            - name: THERMAL_WAIT_TIMEOUT_S
+              value: "300"
+            - name: STARTUP_TIMEOUT_S
+              value: "900"
+            - name: HEALTH_CHECK_INTERVAL_S
+              value: "5"
+            - name: HF_HOME
+              value: /models/huggingface
+            - name: TRANSFORMERS_CACHE
+              value: /models/huggingface/transformers
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.spec_driver \
+                --drafter-addr spec-drafter:50061 \
+                --verifier-addr spec-verifier:50062 \
+                --tokenizer "$TOKENIZER" \
+                --prompts-jsonl /config/prompts.jsonl \
+                --gammas 1,2,4,8,16 \
+                --drafter-freqs-hz 408000000,612000000,828000000 \
+                --verifier-clocks-mhz 810,1050,1410 \
+                --max-new-tokens 64 \
+                --stop-token-ids "" \
+                --idle-baseline-s "$IDLE_BASELINE_S" \
+                --idle-baseline-policy run \
+                --shuffle-conditions --seed "$SWEEP_SEED" \
+                --shuffle-runs \
+                --sample-runtime-metadata \
+                --startup-timeout-s "$STARTUP_TIMEOUT_S" \
+                --health-check-interval-s "$HEALTH_CHECK_INTERVAL_S" \
+                --max-start-temp-c "$MAX_START_TEMP_C" \
+                --thermal-wait-timeout-s "$THERMAL_WAIT_TIMEOUT_S" \
+                --warmup-runs 1 \
+                --runs "$EXPERIMENT_RUNS" \
+                --out /results/spec_gamma_sweep.csv \
+                --resume \
+                --plan-out /results/spec_plan.json \
+                --trace-out /results/spec_trace.jsonl
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: model-cache
+              mountPath: /models
+            - name: prompts
+              mountPath: /config
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+        - name: model-cache
+          persistentVolumeClaim:
+            claimName: hf-cache
+        - name: prompts
+          configMap:
+            name: spec-prompts
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: artifact-audit
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "12"
+    xronos.run-after: "spec-report"
+    xronos.produces: "/results/artifact_audit.json"
+    xronos.consumes: "/results/report_gamma_freq"
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: audit
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.artifact_audit \
+                --results-dir /results \
+                --report-dir /results/report_gamma_freq \
+                --require-report-ok \
+                --out /results/artifact_audit.json
+          volumeMounts:
+            - name: results
+              mountPath: /results
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: spec-report
+  namespace: xronos-spec
+  annotations:
+    xronos.run-order: "11"
+    xronos.run-after: "spec-driver"
+    xronos.produces: "/results/report_gamma_freq"
+    xronos.consumes: "/results/spec_plan.json,/results/verifier_baseline_plan.json,/results/spec_gamma_sweep.csv,/results/verifier_baseline.csv,/results/drafter_doctor.json,/results/verifier_doctor.json,/results/driver_doctor.json,/results/plan_audit.json,/results/network_probe.json,/results/k8s_manifest_audit.json,/results/k8s_runbook.json,/results/k8s_runbook.md,/results/spec_trace.jsonl,/results/verifier_baseline_trace.jsonl"
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector:
+        xronos-role: gpu-verifier
+      containers:
+        - name: report
+          image: xronos:gpu
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: EXPERIMENT_RUNS
+              value: "5"
+            - name: PROMPT_COUNT
+              value: "4"
+            - name: MAX_RUNTIME_TEMP_C
+              value: "85"
+            - name: MAX_ENERGY_CV
+              value: "0.50"
+            - name: MAX_LATENCY_CV
+              value: "0.50"
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command: ["/bin/bash", "-lc"]
+          args:
+            - |
+              python -m xronos.infer.experiment_report \
+                --plan /results/spec_plan.json /results/verifier_baseline_plan.json \
+                --input /results/spec_gamma_sweep.csv /results/verifier_baseline.csv \
+                --doctor-json /results/drafter_doctor.json /results/verifier_doctor.json /results/driver_doctor.json \
+                --plan-audit-json /results/plan_audit.json \
+                --network-json /results/network_probe.json \
+                --k8s-manifest-audit-json /results/k8s_manifest_audit.json \
+                --k8s-runbook-json /results/k8s_runbook.json \
+                --k8s-runbook-markdown /results/k8s_runbook.md \
+                --trace-jsonl /results/spec_trace.jsonl /results/verifier_baseline_trace.jsonl \
+                --require-doctor \
+                --require-driver-doctor \
+                --require-plan-audit \
+                --require-k8s-manifest-audit \
+                --require-network-probe \
+                --require-trace \
+                --require-interaction-analysis \
+                --require-claim-readiness \
+                --require-two-device-boundary \
+                --summary-energy-key mean_drafter_active_energy_mj_per_token \
+                --paired-energy-key system_active_energy_mj_per_generated_token \
+                --min-runs "$EXPERIMENT_RUNS" \
+                --min-prompts "$PROMPT_COUNT" \
+                --min-gammas 5 \
+                --min-power-samples 3 \
+                --paired-bootstrap-samples 1000 \
+                --max-runtime-temp-c "$MAX_RUNTIME_TEMP_C" \
+                --max-energy-cv "$MAX_ENERGY_CV" \
+                --max-latency-cv "$MAX_LATENCY_CV" \
+                --fail-on-throttle \
+                --out-dir /results/report_gamma_freq
+          volumeMounts:
+            - name: results
+              mountPath: /results
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: spec-results

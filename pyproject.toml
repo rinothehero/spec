@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xronos-spec"
+description = "Standalone distributed speculative decoding inference tools extracted from Xronos."
+readme = "README.md"
+requires-python = ">=3.8"
+dynamic = ["version"]
+dependencies = [
+    "grpcio>=1.68.1",
+    "protobuf>=5.28.1,<6",
+]
+
+[project.optional-dependencies]
+infer = [
+    "torch",
+    "transformers==4.45.2",
+    "huggingface_hub",
+    "nvidia-ml-py3",
+    "sentencepiece",
+]
+dev = [
+    "grpcio-tools==1.68.1",
+    "grpc-stubs",
+    "mypy-protobuf==3.6.0",
+    "types-protobuf==5.28.3.20241203",
+]
+
+[tool.hatch.version]
+path = "xronos/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["xronos"]
+
+[project.scripts]
+xronos-spec-drafter = "xronos.infer.drafter_server:main"
+xronos-spec-verifier = "xronos.infer.verifier_server:main"
+xronos-spec-driver = "xronos.infer.spec_driver:main"
+xronos-spec-doctor = "xronos.infer.experiment_doctor:main"
