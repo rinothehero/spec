@@ -64,12 +64,12 @@ def thermal_zone_metadata(root: Path = Path("/sys/class/thermal")) -> dict:
             continue
         try:
             raw_temp = float(temp_path.read_text().strip())
-        except (OSError, ValueError):
+        except Exception:
             continue
         temp_c = raw_temp / 1000.0 if raw_temp > 1000.0 else raw_temp
         try:
             zone_type = (zone / "type").read_text().strip()
-        except OSError:
+        except Exception:
             zone_type = zone.name
         zones.append((zone_type, temp_c))
 
