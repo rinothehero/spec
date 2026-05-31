@@ -301,3 +301,28 @@ class NvidiaSMIPowerSampler:
                 energy_mj=mean_power_mw * duration_s,
             )
         ], len(window)
+
+
+class VerifierPowerSampler:
+    """Verifier power sampler with discrete-GPU and Jetson fallbacks."""
+
+    def __init__(self, interval_s: float = 0.01, gpu_index: int = 0) -> None:
+        self.nvidia_sampler = NvidiaSMIPowerSampler(
+            interval_s=interval_s,
+            gpu_index=gpu_index,
+        )
+        self.jetson_sampler = INA3221PowerSampler(interval_s=interval_s)
+
+    def start(self) -> None:
+        self.nvidia_sampler.start()
+        self.jetson_sampler.start()
+
+    def stop(self) -> None:
+        self.nvidia_sampler.stop()
+        self.jetson_sampler.stop()
+
+    def summarize(self, t0: float, t1: float) -> Tuple[List[PowerSummary], int]:
+        nvidia_rails, nvidia_samples = self.nvidia_sampler.summarize(t0, t1)
+        if nvidia_rails:
+            return nvidia_rails, nvidia_samples
+        return self.jetson_sampler.summarize(t0, t1)

@@ -23,7 +23,7 @@ from xronos.infer.modeling import (
     single_token_tensor,
     token_tensor,
 )
-from xronos.infer.power import NvidiaSMIPowerSampler
+from xronos.infer.power import VerifierPowerSampler
 from xronos.infer.runtime import runtime_metadata, runtime_status_metadata
 from xronos.infer.spec_algorithm import plan_verify_decision
 from xronos.infer.spec_driver import SPEC_RPC_SCHEMA_VERSION
@@ -154,7 +154,7 @@ class VerifierServicer(spec_pb2_grpc.VerifierServicer):
         if duration_s <= 0:
             raise ValueError("duration_s must be greater than 0.")
 
-        sampler = NvidiaSMIPowerSampler(
+        sampler = VerifierPowerSampler(
             interval_s=self.power_interval_s,
             gpu_index=self.gpu_index,
         )
@@ -177,7 +177,7 @@ class VerifierServicer(spec_pb2_grpc.VerifierServicer):
 
         session_id = ensure_session_id(requested_session_id)
         input_ids = token_tensor(context_tokens, self.device)
-        sampler = NvidiaSMIPowerSampler(
+        sampler = VerifierPowerSampler(
             interval_s=self.power_interval_s,
             gpu_index=self.gpu_index,
         )
@@ -224,7 +224,7 @@ class VerifierServicer(spec_pb2_grpc.VerifierServicer):
             base_committed_tokens,
             phase="Verify",
         )
-        sampler = NvidiaSMIPowerSampler(
+        sampler = VerifierPowerSampler(
             interval_s=self.power_interval_s,
             gpu_index=self.gpu_index,
         )
@@ -314,7 +314,7 @@ class VerifierServicer(spec_pb2_grpc.VerifierServicer):
         if max_new_tokens <= 0:
             raise ValueError("max_new_tokens must be greater than 0.")
         session = self._get_session(session_id)
-        sampler = NvidiaSMIPowerSampler(
+        sampler = VerifierPowerSampler(
             interval_s=self.power_interval_s,
             gpu_index=self.gpu_index,
         )
