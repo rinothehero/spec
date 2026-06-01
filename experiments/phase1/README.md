@@ -39,6 +39,14 @@ driver sweep drafter frequencies through gRPC:
 bash experiments/phase1/run_joint_frequency_remote.sh
 ```
 
+By default the wrapper also restarts the remote inference services first:
+
+```text
+Nano pod: stop/start xronos.infer.drafter_server
+AGX pod:  stop/start xronos.infer.verifier_server
+Mas pod:  stop old xronos.infer.spec_driver before launching the new sweep
+```
+
 Default matrix:
 
 ```text
@@ -58,6 +66,13 @@ DRAFTER_FREQS_HZ=306000000,408000000,510000000,612000000,624750000 \
 RUNS=3 \
 RESUME=1 \
 bash experiments/phase1/run_joint_frequency_remote.sh
+```
+
+Disable preflight cleanup only when intentionally keeping an existing process:
+
+```bash
+STOP_EXISTING_REMOTE_RUNS=0 bash experiments/phase1/run_joint_frequency_remote.sh
+RESTART_REMOTE_SERVERS=0 bash experiments/phase1/run_joint_frequency_remote.sh
 ```
 
 Outputs are written under:

@@ -2,9 +2,10 @@
 set -euo pipefail
 
 # Run this script on the Mas host where kubectl can reach the experiment pods.
-# The drafter/verifier servers should already be running in the Nano/AGX pods.
+# By default it restarts the Nano drafter and AGX verifier servers before the sweep.
 
 NS=${NS:-xronos-sjp}
+NANO_POD=${NANO_POD:-xronos-client-sjp-68cb785c48-f8r29}
 AGX_POD=${AGX_POD:-xronos-client-sjp-68cb785c48-hqwdh}
 MAS_POD=${MAS_POD:-xronos-server-sjp-mas-d8764467b-ng4cd}
 
@@ -12,10 +13,14 @@ DRAFTER_ADDR=${DRAFTER_ADDR:-143.0.6.109:50061}
 VERIFIER_ADDR=${VERIFIER_ADDR:-143.0.2.248:50062}
 
 REMOTE_SPEC=${REMOTE_SPEC:-/home/xronos/spec}
+NANO_SPEC=${NANO_SPEC:-/root/spec}
+AGX_SPEC=${AGX_SPEC:-/root/spec}
 PROMPTS_JSONL=${PROMPTS_JSONL:-$REMOTE_SPEC/experiments/prompts/phase1_10_prompts.jsonl}
 PROMPT_LABEL=${PROMPT_LABEL:-p10}
 TOKENIZER=${TOKENIZER:-Qwen/Qwen2.5-3B}
 MODEL_PAIR_LABEL=${MODEL_PAIR_LABEL:-qwen25_0p5b_to_3b}
+DRAFTER_MODEL=${DRAFTER_MODEL:-Qwen/Qwen2.5-0.5B}
+VERIFIER_MODEL=${VERIFIER_MODEL:-Qwen/Qwen2.5-3B}
 
 GAMMAS=${GAMMAS:-1,2,4,8}
 DRAFTER_FREQS_HZ=${DRAFTER_FREQS_HZ:-306000000,408000000,510000000,612000000,624750000}
@@ -30,6 +35,22 @@ OUT_ROOT=${OUT_ROOT:-results/phase1/joint_frequency}
 EXPERIMENT_PREFIX=${EXPERIMENT_PREFIX:-phase1_joint_frequency}
 RUN_SUMMARY=${RUN_SUMMARY:-1}
 RESUME=${RESUME:-0}
+STOP_EXISTING_REMOTE_RUNS=${STOP_EXISTING_REMOTE_RUNS:-1}
+STOP_EXISTING_GRACE_S=${STOP_EXISTING_GRACE_S:-5}
+RESTART_REMOTE_SERVERS=${RESTART_REMOTE_SERVERS:-1}
+SERVER_STOP_GRACE_S=${SERVER_STOP_GRACE_S:-5}
+SERVER_START_SETTLE_S=${SERVER_START_SETTLE_S:-5}
+
+SERVER_HOST=${SERVER_HOST:-0.0.0.0}
+DRAFTER_PORT=${DRAFTER_PORT:-${DRAFTER_ADDR##*:}}
+VERIFIER_PORT=${VERIFIER_PORT:-${VERIFIER_ADDR##*:}}
+SERVER_DEVICE=${SERVER_DEVICE:-cuda}
+SERVER_DTYPE=${SERVER_DTYPE:-float16}
+SERVER_LOG_LEVEL=${SERVER_LOG_LEVEL:-INFO}
+DRAFTER_SERVER_LOG=${DRAFTER_SERVER_LOG:-results/phase1/logs/drafter_server.log}
+VERIFIER_SERVER_LOG=${VERIFIER_SERVER_LOG:-results/phase1/logs/verifier_server.log}
+DRAFTER_SERVER_PID_FILE=${DRAFTER_SERVER_PID_FILE:-results/phase1/logs/drafter_server.pid}
+VERIFIER_SERVER_PID_FILE=${VERIFIER_SERVER_PID_FILE:-results/phase1/logs/verifier_server.pid}
 
 AGX_GPU_ROOT=${AGX_GPU_ROOT:-/sys/class/devfreq/17000000.gpu}
 AGX_FREQ_SETTLE_S=${AGX_FREQ_SETTLE_S:-1}
@@ -119,6 +140,178 @@ cleanup() {
   if [[ -n "${RESTORE_AGX_FREQ:-}" ]]; then
     set_agx_freq "$RESTORE_AGX_FREQ" >/dev/null 2>&1 || true
   fi
+}
+
+stop_existing_remote_runs() {
+  if [[ "$STOP_EXISTING_REMOTE_RUNS" != "1" ]]; then
+    return
+  fi
+
+  kubectl exec -n "$NS" "$MAS_POD" -- bash -lc "
+    set -euo pipefail
+    self=\$\$
+    declare -a pids=()
+
+    while read -r pid ppid stat args; do
+      if [ -z \"\${pid:-}\" ] || [ \"\$pid\" = \"\$self\" ]; then
+        continue
+      fi
+      case \"\$stat\" in
+        *Z*) continue ;;
+      esac
+      case \"\$args\" in
+        *'python3 -m xronos.infer.spec_driver'*|*'python -m xronos.infer.spec_driver'*|*'tee $OUT_ROOT/logs/'*)
+          pids+=(\"\$pid\")
+          ;;
+      esac
+    done < <(ps -eo pid=,ppid=,stat=,args=)
+
+    if [ \"\${#pids[@]}\" -eq 0 ]; then
+      echo 'No existing spec_driver/joint-frequency processes found in Mas pod.'
+      exit 0
+    fi
+
+    echo 'Stopping existing Mas pod experiment processes:'
+    for pid in \"\${pids[@]}\"; do
+      ps -p \"\$pid\" -o pid=,ppid=,stat=,args= || true
+    done
+
+    for pid in \"\${pids[@]}\"; do
+      kill -TERM \"\$pid\" 2>/dev/null || true
+    done
+    sleep '$STOP_EXISTING_GRACE_S'
+
+    declare -a remaining=()
+    for pid in \"\${pids[@]}\"; do
+      if kill -0 \"\$pid\" 2>/dev/null; then
+        stat=\$(ps -p \"\$pid\" -o stat= 2>/dev/null | tr -d '[:space:]' || true)
+        case \"\$stat\" in
+          ''|*Z*) ;;
+          *) remaining+=(\"\$pid\") ;;
+        esac
+      fi
+    done
+
+    if [ \"\${#remaining[@]}\" -gt 0 ]; then
+      echo 'Force-stopping remaining processes:'
+      for pid in \"\${remaining[@]}\"; do
+        ps -p \"\$pid\" -o pid=,ppid=,stat=,args= || true
+        kill -KILL \"\$pid\" 2>/dev/null || true
+      done
+    fi
+  "
+}
+
+stop_remote_module() {
+  local pod=$1
+  local module=$2
+  local label=$3
+
+  kubectl exec -n "$NS" "$pod" -- bash -lc "
+    set -euo pipefail
+    self=\$\$
+    module='$module'
+    label='$label'
+    declare -a pids=()
+
+    while read -r pid ppid stat args; do
+      if [ -z \"\${pid:-}\" ] || [ \"\$pid\" = \"\$self\" ]; then
+        continue
+      fi
+      case \"\$stat\" in
+        *Z*) continue ;;
+      esac
+      if [[ \"\$args\" == *\"\$module\"* ]]; then
+        pids+=(\"\$pid\")
+      fi
+    done < <(ps -eo pid=,ppid=,stat=,args=)
+
+    if [ \"\${#pids[@]}\" -eq 0 ]; then
+      echo \"No existing \$label processes found in $pod.\"
+      exit 0
+    fi
+
+    echo \"Stopping existing \$label processes in $pod:\"
+    for pid in \"\${pids[@]}\"; do
+      ps -p \"\$pid\" -o pid=,ppid=,stat=,args= || true
+    done
+
+    for pid in \"\${pids[@]}\"; do
+      kill -TERM \"\$pid\" 2>/dev/null || true
+    done
+    sleep '$SERVER_STOP_GRACE_S'
+
+    declare -a remaining=()
+    for pid in \"\${pids[@]}\"; do
+      if kill -0 \"\$pid\" 2>/dev/null; then
+        stat=\$(ps -p \"\$pid\" -o stat= 2>/dev/null | tr -d '[:space:]' || true)
+        case \"\$stat\" in
+          ''|*Z*) ;;
+          *) remaining+=(\"\$pid\") ;;
+        esac
+      fi
+    done
+
+    if [ \"\${#remaining[@]}\" -gt 0 ]; then
+      echo \"Force-stopping remaining \$label processes in $pod:\"
+      for pid in \"\${remaining[@]}\"; do
+        ps -p \"\$pid\" -o pid=,ppid=,stat=,args= || true
+        kill -KILL \"\$pid\" 2>/dev/null || true
+      done
+    fi
+  "
+}
+
+start_drafter_server() {
+  kubectl exec -n "$NS" "$NANO_POD" -- bash -lc "
+    set -euo pipefail
+    cd '$NANO_SPEC'
+    mkdir -p results/phase1/logs
+    nohup python3 -u -m xronos.infer.drafter_server \
+      --host '$SERVER_HOST' \
+      --port '$DRAFTER_PORT' \
+      --model '$DRAFTER_MODEL' \
+      --device '$SERVER_DEVICE' \
+      --dtype '$SERVER_DTYPE' \
+      --local-files-only \
+      --log-level '$SERVER_LOG_LEVEL' \
+      > '$DRAFTER_SERVER_LOG' 2>&1 &
+    pid=\$!
+    printf '%s\n' \"\$pid\" > '$DRAFTER_SERVER_PID_FILE'
+    echo \"Started drafter server pid=\$pid log=$NANO_SPEC/$DRAFTER_SERVER_LOG\"
+  "
+}
+
+start_verifier_server() {
+  kubectl exec -n "$NS" "$AGX_POD" -- bash -lc "
+    set -euo pipefail
+    cd '$AGX_SPEC'
+    mkdir -p results/phase1/logs
+    nohup python3 -u -m xronos.infer.verifier_server \
+      --host '$SERVER_HOST' \
+      --port '$VERIFIER_PORT' \
+      --model '$VERIFIER_MODEL' \
+      --device '$SERVER_DEVICE' \
+      --dtype '$SERVER_DTYPE' \
+      --local-files-only \
+      --log-level '$SERVER_LOG_LEVEL' \
+      > '$VERIFIER_SERVER_LOG' 2>&1 &
+    pid=\$!
+    printf '%s\n' \"\$pid\" > '$VERIFIER_SERVER_PID_FILE'
+    echo \"Started verifier server pid=\$pid log=$AGX_SPEC/$VERIFIER_SERVER_LOG\"
+  "
+}
+
+restart_remote_servers() {
+  if [[ "$RESTART_REMOTE_SERVERS" != "1" ]]; then
+    return
+  fi
+
+  stop_remote_module "$NANO_POD" "xronos.infer.drafter_server" "drafter server"
+  stop_remote_module "$AGX_POD" "xronos.infer.verifier_server" "verifier server"
+  start_drafter_server
+  start_verifier_server
+  sleep "$SERVER_START_SETTLE_S"
 }
 
 check_remote_inputs() {
@@ -237,6 +430,8 @@ main() {
   fi
   trap cleanup EXIT
 
+  stop_existing_remote_runs
+  restart_remote_servers
   check_remote_inputs
   make_remote_dirs
 
