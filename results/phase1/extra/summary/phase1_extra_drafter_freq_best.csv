@@ -1,0 +1,4 @@
+gamma,energy_best_drafter_freq_hz,energy_best_mj_per_token,fastest_drafter_freq_hz,fastest_latency_ms
+1,408000000,4228.712,624750000,17052.649
+4,624750000,2696.811,624750000,14279.935
+8,408000000,2688.521,624750000,16455.194

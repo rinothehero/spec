@@ -1,0 +1,20 @@
+{"id":"explain_dsd","prompt":"Explain distributed speculative decoding in one paragraph."}
+{"id":"dvfs_definition","prompt":"Give a concise definition of dynamic voltage and frequency scaling."}
+{"id":"memory_bandwidth","prompt":"Summarize why memory bandwidth matters in LLM decoding."}
+{"id":"edge_energy","prompt":"List three reasons why edge devices need energy-efficient inference."}
+{"id":"latency_throughput","prompt":"Explain the difference between latency and throughput in simple terms."}
+{"id":"gpu_frequency_energy","prompt":"Explain why GPU frequency can affect energy consumption."}
+{"id":"palindrome_code","prompt":"Write a Python function that checks whether a string is a palindrome."}
+{"id":"sort_code","prompt":"Write a short Python function that sorts a list of numbers without using sorted()."}
+{"id":"matrix_multiplication","prompt":"Describe how matrix multiplication works in simple terms."}
+{"id":"climate_causes","prompt":"What are the main causes of climate change?"}
+{"id":"meeting_email","prompt":"Write a short email asking to reschedule a meeting to next week."}
+{"id":"summarize_instruction","prompt":"Summarize the following idea in two sentences: small models can draft text quickly, while large models can verify the draft more accurately."}
+{"id":"reasoning_apples","prompt":"If a box has 12 apples and you give away one third of them, how many apples remain? Explain briefly."}
+{"id":"network_latency","prompt":"Explain how network latency can affect a distributed inference system."}
+{"id":"gpu_memory_bound","prompt":"Explain what it means for a GPU workload to be memory-bound."}
+{"id":"compute_bound","prompt":"Explain what it means for a GPU workload to be compute-bound."}
+{"id":"token_acceptance","prompt":"Explain why a drafter model's acceptance rate matters in speculative decoding."}
+{"id":"simple_story","prompt":"Write a short story about a robot learning to save energy while answering questions."}
+{"id":"bullet_summary","prompt":"Give four bullet points about the benefits and risks of running LLMs on edge devices."}
+{"id":"tradeoff_explain","prompt":"Explain the tradeoff between speed and energy efficiency in computer systems."}

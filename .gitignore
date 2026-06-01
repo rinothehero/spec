@@ -134,3 +134,14 @@ dmypy.json
 
 # logs
 logs/
+
+# Local OS/editor artifacts
+.DS_Store
+~$*
+
+# Experiment scratch outputs
+results/**/logs/
+results/**/partial/
+results/**/probes/
+*_draft.xlsx
+results/phase1/phase1_experiment_tables*.xlsx

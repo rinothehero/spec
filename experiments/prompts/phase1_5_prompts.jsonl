@@ -1,0 +1,5 @@
+{"id":"explain_dsd","prompt":"Explain distributed speculative decoding in one paragraph."}
+{"id":"dvfs_definition","prompt":"Give a concise definition of dynamic voltage and frequency scaling."}
+{"id":"memory_bandwidth","prompt":"Summarize why memory bandwidth matters in LLM decoding."}
+{"id":"palindrome_code","prompt":"Write a Python function that checks whether a string is a palindrome."}
+{"id":"matrix_multiplication","prompt":"Describe how matrix multiplication works in simple terms."}

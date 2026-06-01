@@ -1,0 +1,4172 @@
+{
+  "algorithm": "speculative",
+  "algorithm_version": "greedy-draft-verify-commit-v1",
+  "combinations": [
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 0,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 1,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 2,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 3,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 4,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 5,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 6,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 7,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 8,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 9,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 10,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 11,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 12,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 13,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 14,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 15,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 16,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 17,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 18,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 19,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 20,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 21,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 22,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 23,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 24,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 25,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 26,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 27,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 28,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 29,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 30,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 31,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 32,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 33,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 34,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 35,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 36,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 37,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 38,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 39,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 40,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 41,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 42,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 43,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 44,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 45,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 46,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 47,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 48,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 49,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 50,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 51,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 52,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 53,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 54,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 55,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 56,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 57,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 58,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 59,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 60,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 61,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 62,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 63,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 64,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 65,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 66,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 67,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 68,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 69,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 70,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 71,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 72,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 73,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 74,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 75,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 76,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 77,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 78,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 79,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 80,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 81,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 82,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 83,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 84,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 85,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 86,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 87,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 88,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 89,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 90,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 91,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 92,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 93,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 94,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 95,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 96,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 97,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 98,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 99,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 100,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 101,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 102,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 103,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 104,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 105,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 106,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 107,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 108,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 109,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 110,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 111,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 112,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 113,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 114,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 115,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 116,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 117,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 118,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 119,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 120,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 121,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 122,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 123,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 124,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 125,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 126,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 127,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 128,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 129,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 130,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 131,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 132,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 133,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 134,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 135,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 136,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 137,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 138,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 139,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 140,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 141,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 142,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 143,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 144,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 145,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 146,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 147,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 148,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 149,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 150,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 151,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 152,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 153,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 154,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 155,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 156,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 157,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 158,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 159,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 160,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 161,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 162,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 163,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 164,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 165,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 166,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 167,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 168,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 169,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 170,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 171,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 172,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 173,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 174,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 175,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 176,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 177,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 178,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 179,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 180,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 181,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 182,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 183,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 184,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 185,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 186,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 187,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 188,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 189,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 190,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 191,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 192,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 193,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 194,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 195,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 196,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 197,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 198,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 199,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    }
+  ],
+  "decoding_mode": "greedy",
+  "drafter_addr": "143.0.6.109:50061",
+  "drafter_freqs_hz": [
+    306000000,
+    408000000,
+    510000000,
+    612000000,
+    624750000
+  ],
+  "experiment": "phase1_drafter_main_qwen25_0p5b_to_3b_fv816",
+  "gammas": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "health_check_interval_s": 5.0,
+  "idle_baseline_policy": "condition",
+  "idle_baseline_s": 0.0,
+  "max_new_tokens": 64,
+  "max_start_temp_c": null,
+  "measured_runs": 1,
+  "measurement_schedule": [
+    {
+      "condition_order": 0,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 1,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 1,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 2,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 2,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 3,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 3,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 4,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 4,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 5,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 5,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 6,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 6,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 7,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 7,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 8,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 8,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 9,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 9,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 10,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 10,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 11,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 11,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 12,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 12,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 13,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 13,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 14,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 14,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 15,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 15,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 16,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 16,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 17,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 17,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 18,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 18,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 19,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 19,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 20,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 20,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 21,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 21,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 22,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 22,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 23,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 23,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 24,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 24,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 25,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 25,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 26,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 26,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 27,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 27,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 28,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 28,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 29,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 29,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 30,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 30,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 31,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 31,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 32,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 32,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 33,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 33,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 34,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 34,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 35,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 35,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 36,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 36,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 37,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 37,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 38,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 38,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 39,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 39,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 40,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 40,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 41,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 41,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 42,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 42,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 43,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 43,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 44,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 44,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 45,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 45,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 46,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 46,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 47,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 47,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 48,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 48,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 49,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 49,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 50,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 50,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 51,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 51,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 52,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 52,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 53,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 53,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 54,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 54,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 55,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 55,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 56,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 56,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 57,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 57,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 58,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 58,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 59,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 59,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 60,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 60,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 61,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 61,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 62,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 62,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 63,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 63,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 64,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 64,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 65,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 65,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 66,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 66,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 67,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 67,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 68,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 68,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 69,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 69,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 70,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 70,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 71,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 71,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 72,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 72,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 73,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 73,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 74,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 74,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 75,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 75,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 76,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 76,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 77,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 77,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 78,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 78,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 79,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 79,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 80,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 80,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 81,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 81,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 82,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 82,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 83,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 83,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 84,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 84,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 85,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 85,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 86,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 86,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 87,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 87,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 88,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 88,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 89,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 89,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 90,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 90,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 91,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 91,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 92,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 92,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 93,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 93,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 94,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 94,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 95,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 95,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 96,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 96,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 97,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 97,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 98,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 98,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 99,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 99,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 100,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 100,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 101,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 101,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 102,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 102,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 103,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 103,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 104,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 104,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 105,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 105,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 106,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 106,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 107,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 107,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 108,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 108,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 109,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 109,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 110,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 110,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 111,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 111,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 112,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 112,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 113,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 113,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 114,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 114,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 115,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 115,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 116,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 116,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 117,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 117,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 118,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 118,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 119,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 119,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 120,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 120,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 121,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 121,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 122,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 122,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 123,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 123,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 124,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 124,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 125,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 125,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 126,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 126,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 127,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 127,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 128,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 128,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 129,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 129,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 130,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 130,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 131,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 131,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 132,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 132,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 133,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 133,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 134,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 134,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 135,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 135,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 136,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 136,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 137,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 137,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 138,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 138,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 139,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 139,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 140,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 140,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 141,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 141,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 142,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 142,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 143,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 143,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 144,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 144,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 145,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 145,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 146,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 146,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 147,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 147,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 148,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 148,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 149,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 149,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 150,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 150,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 151,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 151,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 152,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 152,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 153,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 153,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 154,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 154,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 155,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 155,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 156,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 156,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 157,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 157,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 158,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 158,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 159,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 159,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 160,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 160,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 161,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 161,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 162,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 162,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 163,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 163,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 164,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 164,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 165,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 165,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 166,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 166,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 167,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 167,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 168,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 168,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 169,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 169,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 170,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 170,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 171,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 171,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 172,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 172,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 173,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 173,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 174,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 174,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 175,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 175,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 176,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 176,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 177,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 177,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 178,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 178,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 179,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 179,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 180,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 180,
+      "drafter_freq_hz": 306000000,
+      "gamma": 1,
+      "order": 181,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 181,
+      "drafter_freq_hz": 306000000,
+      "gamma": 2,
+      "order": 182,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 182,
+      "drafter_freq_hz": 306000000,
+      "gamma": 4,
+      "order": 183,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 183,
+      "drafter_freq_hz": 306000000,
+      "gamma": 8,
+      "order": 184,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 184,
+      "drafter_freq_hz": 408000000,
+      "gamma": 1,
+      "order": 185,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 185,
+      "drafter_freq_hz": 408000000,
+      "gamma": 2,
+      "order": 186,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 186,
+      "drafter_freq_hz": 408000000,
+      "gamma": 4,
+      "order": 187,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 187,
+      "drafter_freq_hz": 408000000,
+      "gamma": 8,
+      "order": 188,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 188,
+      "drafter_freq_hz": 510000000,
+      "gamma": 1,
+      "order": 189,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 189,
+      "drafter_freq_hz": 510000000,
+      "gamma": 2,
+      "order": 190,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 190,
+      "drafter_freq_hz": 510000000,
+      "gamma": 4,
+      "order": 191,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 191,
+      "drafter_freq_hz": 510000000,
+      "gamma": 8,
+      "order": 192,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 192,
+      "drafter_freq_hz": 612000000,
+      "gamma": 1,
+      "order": 193,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 193,
+      "drafter_freq_hz": 612000000,
+      "gamma": 2,
+      "order": 194,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 194,
+      "drafter_freq_hz": 612000000,
+      "gamma": 4,
+      "order": 195,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 195,
+      "drafter_freq_hz": 612000000,
+      "gamma": 8,
+      "order": 196,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 196,
+      "drafter_freq_hz": 624750000,
+      "gamma": 1,
+      "order": 197,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 197,
+      "drafter_freq_hz": 624750000,
+      "gamma": 2,
+      "order": 198,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 198,
+      "drafter_freq_hz": 624750000,
+      "gamma": 4,
+      "order": 199,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 199,
+      "drafter_freq_hz": 624750000,
+      "gamma": 8,
+      "order": 200,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "run": 1,
+      "verifier_clock_mhz": null
+    }
+  ],
+  "metadata": {
+    "command": [
+      "/home/xronos/spec/xronos/infer/spec_driver.py",
+      "--drafter-addr",
+      "143.0.6.109:50061",
+      "--verifier-addr",
+      "143.0.2.248:50062",
+      "--tokenizer",
+      "Qwen/Qwen2.5-3B",
+      "--prompts-jsonl",
+      "/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl",
+      "--gammas",
+      "1,2,4,8",
+      "--drafter-freqs-hz",
+      "306000000,408000000,510000000,612000000,624750000",
+      "--warmup-runs",
+      "0",
+      "--runs",
+      "1",
+      "--max-new-tokens",
+      "64",
+      "--local-files-only",
+      "--sample-runtime-metadata",
+      "--seed",
+      "20260602",
+      "--experiment",
+      "phase1_drafter_main_qwen25_0p5b_to_3b_fv816",
+      "--plan-out",
+      "results/phase1/drafter_main/plans/phase1_drafter_main_qwen25_0p5b_to_3b_fd306_408_510_612_624_fv816_g1_2_4_8_p10_r1_w0_t64.plan.json",
+      "--trace-out",
+      "results/phase1/drafter_main/traces/phase1_drafter_main_qwen25_0p5b_to_3b_fd306_408_510_612_624_fv816_g1_2_4_8_p10_r1_w0_t64.trace.jsonl",
+      "--out",
+      "results/phase1/drafter_main/raw/phase1_drafter_main_qwen25_0p5b_to_3b_fd306_408_510_612_624_fv816_g1_2_4_8_p10_r1_w0_t64.csv"
+    ],
+    "command_sha256": "33ee9f0ac04c9bb9b7b314c62f0b21a0c28c33f69bb007e7e75cf79455eed523",
+    "created_at_utc": "2026-06-01T01:06:59.381268+00:00",
+    "cuda_visible_devices": "",
+    "cwd": "/home/xronos/spec",
+    "git_branch": "main",
+    "git_commit": "e38022e8ca311fc8ca7a4fe9489b7cca95eb20bd",
+    "git_dirty": true,
+    "hostname": "xronos-server-sjp-mas-d8764467b-ng4cd",
+    "node_name": "",
+    "nvidia_visible_devices": "all",
+    "platform": "Linux-5.4.0-150-generic-x86_64-with-glibc2.35",
+    "pod_name": "",
+    "pod_namespace": "",
+    "python": "3.10.12",
+    "result_schema_version": "xronos-spec-results-v12",
+    "spec_rpc_schema_version": "xronos-spec-rpc-v3",
+    "xronos_git_commit": "",
+    "xronos_image": ""
+  },
+  "plan_design_sha256": "63e31d6ac7c624649258b5cebb6a36befc7e3050a463b5771990e3ba52959653",
+  "plan_sha256": "63e31d6ac7c624649258b5cebb6a36befc7e3050a463b5771990e3ba52959653",
+  "prompt_count": 10,
+  "prompt_set_sha256": "66325ab09672ffa458faa50b0d72682e3545fecc53b95ee4764f0f1acaa0c005",
+  "prompts": [
+    {
+      "prompt_chars": 58,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:1"
+    },
+    {
+      "prompt_chars": 67,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:2"
+    },
+    {
+      "prompt_chars": 55,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:3"
+    },
+    {
+      "prompt_chars": 68,
+      "prompt_id": "edge_energy",
+      "prompt_sha256": "42c93d2247ad88da2a53f77bb1deee58dbed42df0d8bc0482bdbd9fc5b71560b",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:4"
+    },
+    {
+      "prompt_chars": 70,
+      "prompt_id": "latency_throughput",
+      "prompt_sha256": "1a2eb2bd3012e7e43ca390c10bb939f3474b23cc2be0fae186b2bce5791560ff",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:5"
+    },
+    {
+      "prompt_chars": 56,
+      "prompt_id": "gpu_frequency_energy",
+      "prompt_sha256": "7de2781b193a642c0641e52839738364a5c37f199a4e692a240f3b62175dc75c",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:6"
+    },
+    {
+      "prompt_chars": 69,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:7"
+    },
+    {
+      "prompt_chars": 82,
+      "prompt_id": "sort_code",
+      "prompt_sha256": "b36a3aee4722a1e9103dd8c3d7308d4b165cdbbdef6168e1c45b8687e6ab5e56",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:8"
+    },
+    {
+      "prompt_chars": 57,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:9"
+    },
+    {
+      "prompt_chars": 43,
+      "prompt_id": "climate_causes",
+      "prompt_sha256": "7820e066b7699c32e2e8f6a7e48c9087f7a001918ca70092192a7e3f585638f6",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_10_prompts.jsonl:10"
+    }
+  ],
+  "sample_runtime_metadata": true,
+  "schema_version": "xronos-spec-results-v12",
+  "seed": 20260602,
+  "shuffle_conditions": false,
+  "shuffle_runs": false,
+  "startup_timeout_s": 600.0,
+  "stop_token_ids": "",
+  "stop_token_policy": "tokenizer_eos",
+  "system_boundary": "two_device_active",
+  "thermal_check_interval_s": 5.0,
+  "thermal_wait_timeout_s": 300.0,
+  "tokenizer": "Qwen/Qwen2.5-3B",
+  "total_idle_baseline_pairs": 0,
+  "total_idle_baselines": 0,
+  "total_measured_sessions": 200,
+  "total_warmup_sessions": 0,
+  "trace_out": "results/phase1/drafter_main/traces/phase1_drafter_main_qwen25_0p5b_to_3b_fd306_408_510_612_624_fv816_g1_2_4_8_p10_r1_w0_t64.trace.jsonl",
+  "verifier_addr": "143.0.2.248:50062",
+  "verifier_clocks_mhz": [
+    null
+  ],
+  "warmup_runs": 0,
+  "warmup_schedule": []
+}

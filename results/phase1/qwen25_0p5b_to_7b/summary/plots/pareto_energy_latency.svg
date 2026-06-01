@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="100%" height="100%" fill="white"/>
+<line x1="90" y1="40" x2="90" y2="480" stroke="#222" stroke-width="1.5"/>
+<line x1="90" y1="480" x2="870" y2="480" stroke="#222" stroke-width="1.5"/>
+<text x="480.0" y="545" text-anchor="middle" font-size="15">Latency (ms)</text>
+<text x="20" y="260.0" text-anchor="middle" font-size="15" transform="rotate(-90 20 260.0)">Energy per token (mJ)</text>
+<circle cx="322.7" cy="237.2" r="5" fill="#1f77b4"/>
+<title>g1 1300MHz: latency=16479.0, energy/token=6573.9</title>
+<circle cx="200.8" cy="343.2" r="5" fill="#1f77b4"/>
+<title>g2 1300MHz: latency=14439.9, energy/token=4786.3</title>
+<circle cx="143.8" cy="410.5" r="5" fill="#1f77b4"/>
+<title>g4 1300MHz: latency=13486.0, energy/token=3653.0</title>
+<circle cx="222.5" cy="439.8" r="5" fill="#1f77b4"/>
+<title>g8 1300MHz: latency=14801.9, energy/token=3159.1</title>
+<circle cx="816.2" cy="70.3" r="5" fill="#1f77b4"/>
+<title>g1 408MHz: latency=24734.8, energy/token=9385.2</title>
+<circle cx="535.4" cy="219.7" r="5" fill="#1f77b4"/>
+<title>g2 408MHz: latency=20037.8, energy/token=6869.0</title>
+<circle cx="404.9" cy="316.4" r="5" fill="#1f77b4"/>
+<title>g4 408MHz: latency=17854.5, energy/token=5239.2</title>
+<circle cx="418.1" cy="368.0" r="5" fill="#1f77b4"/>
+<title>g8 408MHz: latency=18074.9, energy/token=4368.4</title>
+<circle cx="423.8" cy="274.3" r="5" fill="#1f77b4"/>
+<title>g1 816MHz: latency=18170.9, energy/token=5947.4</title>
+<circle cx="238.6" cy="369.4" r="5" fill="#1f77b4"/>
+<title>g2 816MHz: latency=15072.7, energy/token=4345.8</title>
+<circle cx="182.4" cy="424.5" r="5" fill="#1f77b4"/>
+<title>g4 816MHz: latency=14132.3, energy/token=3416.2</title>
+<circle cx="260.6" cy="449.7" r="5" fill="#1f77b4"/>
+<title>g8 816MHz: latency=15440.2, energy/token=2992.9</title>
+</svg>

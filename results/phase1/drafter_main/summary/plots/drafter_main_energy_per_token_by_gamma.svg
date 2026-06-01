@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="450.0" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700">Drafter Main: Energy per Token by Gamma</text>
+<line x1="80" y1="440" x2="870" y2="440" stroke="#333"/>
+<line x1="80" y1="60" x2="80" y2="440" stroke="#333"/>
+<line x1="80" y1="440.0" x2="870" y2="440.0" stroke="#ddd"/>
+<text x="72" y="444.0" text-anchor="end" font-family="Arial" font-size="11">2419</text>
+<line x1="80" y1="344.99999999999994" x2="870" y2="344.99999999999994" stroke="#ddd"/>
+<text x="72" y="348.99999999999994" text-anchor="end" font-family="Arial" font-size="11">2927</text>
+<line x1="80" y1="250.00000000000003" x2="870" y2="250.00000000000003" stroke="#ddd"/>
+<text x="72" y="254.00000000000003" text-anchor="end" font-family="Arial" font-size="11">3434</text>
+<line x1="80" y1="155.0" x2="870" y2="155.0" stroke="#ddd"/>
+<text x="72" y="159.0" text-anchor="end" font-family="Arial" font-size="11">3941</text>
+<line x1="80" y1="60.0" x2="870" y2="60.0" stroke="#ddd"/>
+<text x="72" y="64.0" text-anchor="end" font-family="Arial" font-size="11">4448</text>
+<text x="80.0" y="468" text-anchor="middle" font-family="Arial" font-size="12">306</text>
+<text x="277.5" y="468" text-anchor="middle" font-family="Arial" font-size="12">408</text>
+<text x="475.0" y="468" text-anchor="middle" font-family="Arial" font-size="12">510</text>
+<text x="672.5" y="468" text-anchor="middle" font-family="Arial" font-size="12">612</text>
+<text x="870.0" y="468" text-anchor="middle" font-family="Arial" font-size="12">624.75</text>
+<text x="450.0" y="502" text-anchor="middle" font-family="Arial" font-size="13">drafter freq (MHz)</text>
+<text transform="translate(18 260.0) rotate(-90)" text-anchor="middle" font-family="Arial" font-size="13">mJ/token</text>
+<polyline fill="none" stroke="#155E75" stroke-width="2.5" points="80.0,102.7 277.5,86.2 475.0,100.1 672.5,99.4 870.0,97.9"/>
+<circle cx="80.0" cy="102.7" r="4" fill="#155E75"/>
+<circle cx="277.5" cy="86.2" r="4" fill="#155E75"/>
+<circle cx="475.0" cy="100.1" r="4" fill="#155E75"/>
+<circle cx="672.5" cy="99.4" r="4" fill="#155E75"/>
+<circle cx="870.0" cy="97.9" r="4" fill="#155E75"/>
+<rect x="755" y="70" width="12" height="12" fill="#155E75"/><text x="772" y="81" font-family="Arial" font-size="12">gamma=1</text>
+<polyline fill="none" stroke="#EA580C" stroke-width="2.5" points="80.0,265.8 277.5,255.6 475.0,254.6 672.5,257.1 870.0,260.0"/>
+<circle cx="80.0" cy="265.8" r="4" fill="#EA580C"/>
+<circle cx="277.5" cy="255.6" r="4" fill="#EA580C"/>
+<circle cx="475.0" cy="254.6" r="4" fill="#EA580C"/>
+<circle cx="672.5" cy="257.1" r="4" fill="#EA580C"/>
+<circle cx="870.0" cy="260.0" r="4" fill="#EA580C"/>
+<rect x="755" y="92" width="12" height="12" fill="#EA580C"/><text x="772" y="103" font-family="Arial" font-size="12">gamma=2</text>
+<polyline fill="none" stroke="#166534" stroke-width="2.5" points="80.0,387.8 277.5,392.1 475.0,389.3 672.5,388.6 870.0,388.2"/>
+<circle cx="80.0" cy="387.8" r="4" fill="#166534"/>
+<circle cx="277.5" cy="392.1" r="4" fill="#166534"/>
+<circle cx="475.0" cy="389.3" r="4" fill="#166534"/>
+<circle cx="672.5" cy="388.6" r="4" fill="#166534"/>
+<circle cx="870.0" cy="388.2" r="4" fill="#166534"/>
+<rect x="755" y="114" width="12" height="12" fill="#166534"/><text x="772" y="125" font-family="Arial" font-size="12">gamma=4</text>
+<polyline fill="none" stroke="#0284C7" stroke-width="2.5" points="80.0,399.2 277.5,407.8 475.0,413.8 672.5,405.5 870.0,413.2"/>
+<circle cx="80.0" cy="399.2" r="4" fill="#0284C7"/>
+<circle cx="277.5" cy="407.8" r="4" fill="#0284C7"/>
+<circle cx="475.0" cy="413.8" r="4" fill="#0284C7"/>
+<circle cx="672.5" cy="405.5" r="4" fill="#0284C7"/>
+<circle cx="870.0" cy="413.2" r="4" fill="#0284C7"/>
+<rect x="755" y="136" width="12" height="12" fill="#0284C7"/><text x="772" y="147" font-family="Arial" font-size="12">gamma=8</text>
+</svg>

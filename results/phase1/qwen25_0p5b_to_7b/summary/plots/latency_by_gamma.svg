@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="100%" height="100%" fill="white"/>
+<line x1="90" y1="40" x2="90" y2="480" stroke="#222" stroke-width="1.5"/>
+<line x1="90" y1="480" x2="870" y2="480" stroke="#222" stroke-width="1.5"/>
+<text x="480.0" y="545" text-anchor="middle" font-size="15">Verifier GPU frequency (MHz)</text>
+<text x="20" y="260.0" text-anchor="middle" font-size="15" transform="rotate(-90 20 260.0)">Latency (ms)</text>
+<text x="90.0" y="515" text-anchor="middle" font-size="12">408</text>
+<text x="480.0" y="515" text-anchor="middle" font-size="12">854</text>
+<text x="870.0" y="515" text-anchor="middle" font-size="12">1300</text>
+<text x="78" y="484.0" text-anchor="end" font-size="12">12586</text>
+<text x="78" y="264.0" text-anchor="end" font-size="12">19110</text>
+<text x="78" y="44.0" text-anchor="end" font-size="12">25635</text>
+<polyline points="90.0,70.3 446.6,291.7 870.0,348.7" fill="none" stroke="#1f77b4" stroke-width="3"/>
+<circle cx="90.0" cy="70.3" r="5" fill="#1f77b4"/>
+<circle cx="446.6" cy="291.7" r="5" fill="#1f77b4"/>
+<circle cx="870.0" cy="348.7" r="5" fill="#1f77b4"/>
+<rect x="720" y="30" width="14" height="14" fill="#1f77b4"/>
+<text x="740" y="42" font-size="13">gamma=1</text>
+<polyline points="90.0,228.7 446.6,396.2 870.0,417.5" fill="none" stroke="#d62728" stroke-width="3"/>
+<circle cx="90.0" cy="228.7" r="5" fill="#d62728"/>
+<circle cx="446.6" cy="396.2" r="5" fill="#d62728"/>
+<circle cx="870.0" cy="417.5" r="5" fill="#d62728"/>
+<rect x="720" y="52" width="14" height="14" fill="#d62728"/>
+<text x="740" y="64" font-size="13">gamma=2</text>
+<polyline points="90.0,302.3 446.6,427.9 870.0,449.7" fill="none" stroke="#2ca02c" stroke-width="3"/>
+<circle cx="90.0" cy="302.3" r="5" fill="#2ca02c"/>
+<circle cx="446.6" cy="427.9" r="5" fill="#2ca02c"/>
+<circle cx="870.0" cy="449.7" r="5" fill="#2ca02c"/>
+<rect x="720" y="74" width="14" height="14" fill="#2ca02c"/>
+<text x="740" y="86" font-size="13">gamma=4</text>
+<polyline points="90.0,294.9 446.6,383.8 870.0,405.3" fill="none" stroke="#9467bd" stroke-width="3"/>
+<circle cx="90.0" cy="294.9" r="5" fill="#9467bd"/>
+<circle cx="446.6" cy="383.8" r="5" fill="#9467bd"/>
+<circle cx="870.0" cy="405.3" r="5" fill="#9467bd"/>
+<rect x="720" y="96" width="14" height="14" fill="#9467bd"/>
+<text x="740" y="108" font-size="13">gamma=8</text>
+</svg>

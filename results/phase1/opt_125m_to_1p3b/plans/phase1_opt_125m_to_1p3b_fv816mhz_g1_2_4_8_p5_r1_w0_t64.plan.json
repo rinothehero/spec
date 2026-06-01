@@ -1,0 +1,536 @@
+{
+  "algorithm": "speculative",
+  "algorithm_version": "greedy-draft-verify-commit-v1",
+  "combinations": [
+    {
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 0,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 1,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 2,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 3,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 4,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 5,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 6,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 7,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 8,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 9,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 10,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 11,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 12,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 13,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 14,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 15,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "measured_runs": 1,
+      "order": 16,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "measured_runs": 1,
+      "order": 17,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "measured_runs": 1,
+      "order": 18,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    },
+    {
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "measured_runs": 1,
+      "order": 19,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "verifier_clock_mhz": null,
+      "warmup_runs": 0
+    }
+  ],
+  "decoding_mode": "greedy",
+  "drafter_addr": "143.0.6.109:50061",
+  "drafter_freqs_hz": [
+    null
+  ],
+  "experiment": "phase1_opt_125m_to_1p3b_fv816mhz",
+  "gammas": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "health_check_interval_s": 5.0,
+  "idle_baseline_policy": "condition",
+  "idle_baseline_s": 0.0,
+  "max_new_tokens": 64,
+  "max_start_temp_c": null,
+  "measured_runs": 1,
+  "measurement_schedule": [
+    {
+      "condition_order": 0,
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "order": 1,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 1,
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "order": 2,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 2,
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "order": 3,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 3,
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "order": 4,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 4,
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "order": 5,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 5,
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "order": 6,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 6,
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "order": 7,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 7,
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "order": 8,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 8,
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "order": 9,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 9,
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "order": 10,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 10,
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "order": 11,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 11,
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "order": 12,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 12,
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "order": 13,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 13,
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "order": 14,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 14,
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "order": 15,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 15,
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "order": 16,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 16,
+      "drafter_freq_hz": null,
+      "gamma": 1,
+      "order": 17,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 17,
+      "drafter_freq_hz": null,
+      "gamma": 2,
+      "order": 18,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 18,
+      "drafter_freq_hz": null,
+      "gamma": 4,
+      "order": 19,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    },
+    {
+      "condition_order": 19,
+      "drafter_freq_hz": null,
+      "gamma": 8,
+      "order": 20,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "run": 1,
+      "verifier_clock_mhz": null
+    }
+  ],
+  "metadata": {
+    "command": [
+      "/home/xronos/spec/xronos/infer/spec_driver.py",
+      "--drafter-addr",
+      "143.0.6.109:50061",
+      "--verifier-addr",
+      "143.0.2.248:50062",
+      "--tokenizer",
+      "facebook/opt-1.3b",
+      "--prompts-jsonl",
+      "/home/xronos/spec/experiments/prompts/phase1_5_prompts.jsonl",
+      "--gammas",
+      "1,2,4,8",
+      "--warmup-runs",
+      "0",
+      "--runs",
+      "1",
+      "--max-new-tokens",
+      "64",
+      "--local-files-only",
+      "--sample-runtime-metadata",
+      "--seed",
+      "20262017",
+      "--experiment",
+      "phase1_opt_125m_to_1p3b_fv816mhz",
+      "--plan-out",
+      "results/phase1/opt_125m_to_1p3b/plans/phase1_opt_125m_to_1p3b_fv816mhz_g1_2_4_8_p5_r1_w0_t64.plan.json",
+      "--trace-out",
+      "results/phase1/opt_125m_to_1p3b/traces/phase1_opt_125m_to_1p3b_fv816mhz_g1_2_4_8_p5_r1_w0_t64.trace.jsonl",
+      "--out",
+      "results/phase1/opt_125m_to_1p3b/raw/phase1_opt_125m_to_1p3b_fv816mhz_g1_2_4_8_p5_r1_w0_t64.csv"
+    ],
+    "command_sha256": "d4627c9caa93f14c79a59347ad435543330da9df6c513fb93664768bbe14287a",
+    "created_at_utc": "2026-05-31T17:18:07.384092+00:00",
+    "cuda_visible_devices": "",
+    "cwd": "/home/xronos/spec",
+    "git_branch": "main",
+    "git_commit": "e38022e8ca311fc8ca7a4fe9489b7cca95eb20bd",
+    "git_dirty": true,
+    "hostname": "xronos-server-sjp-mas-d8764467b-ng4cd",
+    "node_name": "",
+    "nvidia_visible_devices": "all",
+    "platform": "Linux-5.4.0-150-generic-x86_64-with-glibc2.35",
+    "pod_name": "",
+    "pod_namespace": "",
+    "python": "3.10.12",
+    "result_schema_version": "xronos-spec-results-v12",
+    "spec_rpc_schema_version": "xronos-spec-rpc-v3",
+    "xronos_git_commit": "",
+    "xronos_image": ""
+  },
+  "plan_design_sha256": "3785573200f836951c6978709ca18196400f4eac7544fac374af6c2c7512b20b",
+  "plan_sha256": "3785573200f836951c6978709ca18196400f4eac7544fac374af6c2c7512b20b",
+  "prompt_count": 5,
+  "prompt_set_sha256": "65bc442ba5ddf05a8e2bf1bd5da5199dafdb018bad45ca53650454714441cca4",
+  "prompts": [
+    {
+      "prompt_chars": 58,
+      "prompt_id": "explain_dsd",
+      "prompt_sha256": "06766fd4851476076573008b10ce67ec1fd58c4128f42cf9e89bc70a14b370f1",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_5_prompts.jsonl:1"
+    },
+    {
+      "prompt_chars": 67,
+      "prompt_id": "dvfs_definition",
+      "prompt_sha256": "f90b5e257dc965eb622186b11b03501d8e6df33f5584402d2150df6f093892da",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_5_prompts.jsonl:2"
+    },
+    {
+      "prompt_chars": 55,
+      "prompt_id": "memory_bandwidth",
+      "prompt_sha256": "fbea2c7c084e156f4162ba623380d6289a64c768ed1f3d7a1bcf728254ef5088",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_5_prompts.jsonl:3"
+    },
+    {
+      "prompt_chars": 69,
+      "prompt_id": "palindrome_code",
+      "prompt_sha256": "5bf564e4005b628e759d4051e5c1e96cfab7f54a1efbf27e6ea21a35e0a41a4a",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_5_prompts.jsonl:4"
+    },
+    {
+      "prompt_chars": 57,
+      "prompt_id": "matrix_multiplication",
+      "prompt_sha256": "dd4c7c579546cfd0e7a69f464b95a424f29aa9c4fad11cafa0853adcabb86fff",
+      "prompt_source": "jsonl:/home/xronos/spec/experiments/prompts/phase1_5_prompts.jsonl:5"
+    }
+  ],
+  "sample_runtime_metadata": true,
+  "schema_version": "xronos-spec-results-v12",
+  "seed": 20262017,
+  "shuffle_conditions": false,
+  "shuffle_runs": false,
+  "startup_timeout_s": 600.0,
+  "stop_token_ids": "",
+  "stop_token_policy": "tokenizer_eos",
+  "system_boundary": "two_device_active",
+  "thermal_check_interval_s": 5.0,
+  "thermal_wait_timeout_s": 300.0,
+  "tokenizer": "facebook/opt-1.3b",
+  "total_idle_baseline_pairs": 0,
+  "total_idle_baselines": 0,
+  "total_measured_sessions": 20,
+  "total_warmup_sessions": 0,
+  "trace_out": "results/phase1/opt_125m_to_1p3b/traces/phase1_opt_125m_to_1p3b_fv816mhz_g1_2_4_8_p5_r1_w0_t64.trace.jsonl",
+  "verifier_addr": "143.0.2.248:50062",
+  "verifier_clocks_mhz": [
+    null
+  ],
+  "warmup_runs": 0,
+  "warmup_schedule": []
+}

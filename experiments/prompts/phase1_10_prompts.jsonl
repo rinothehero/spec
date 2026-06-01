@@ -1,0 +1,10 @@
+{"id":"explain_dsd","prompt":"Explain distributed speculative decoding in one paragraph."}
+{"id":"dvfs_definition","prompt":"Give a concise definition of dynamic voltage and frequency scaling."}
+{"id":"memory_bandwidth","prompt":"Summarize why memory bandwidth matters in LLM decoding."}
+{"id":"edge_energy","prompt":"List three reasons why edge devices need energy-efficient inference."}
+{"id":"latency_throughput","prompt":"Explain the difference between latency and throughput in simple terms."}
+{"id":"gpu_frequency_energy","prompt":"Explain why GPU frequency can affect energy consumption."}
+{"id":"palindrome_code","prompt":"Write a Python function that checks whether a string is a palindrome."}
+{"id":"sort_code","prompt":"Write a short Python function that sorts a list of numbers without using sorted()."}
+{"id":"matrix_multiplication","prompt":"Describe how matrix multiplication works in simple terms."}
+{"id":"climate_causes","prompt":"What are the main causes of climate change?"}
